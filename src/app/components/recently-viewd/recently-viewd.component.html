@@ -1,0 +1,32 @@
+
+
+<div class="container">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="headings01">
+          <h2>{{ recently }}</h2>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-12">
+    
+          <owl-carousel-o [options]="customOptions" class="arrivas01">
+    
+              <ng-template carouselSlide *ngFor="let arrival of newArrival">
+                <div class="card">
+                  <img src="{{arrival.image}}" class="card-img-top" alt="nalli">
+                  <div class="card-body">
+                    <h5 class="card-title">{{arrival.title}}</h5>
+                    <p class="card-text">{{arrival.des}}</p>
+                    <p>₹ {{arrival.price}}</p>
+                  </div>
+                </div>
+              </ng-template>
+    
+          </owl-carousel-o>
+    
+        </div>
+      </div>
+    </div>

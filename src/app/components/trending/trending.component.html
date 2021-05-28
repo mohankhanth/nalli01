@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="headings01">
+          <h2>{{ trend }}</h2>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-12">
+    
+          <owl-carousel-o [options]="customOptions" class="arrivas01">
+    
+              <ng-template carouselSlide *ngFor="let arrival of trending">
+                <div class="card wraptrdgs01">
+                  <img src="{{arrival.image}}" class="card-img-top" alt="nalli">
+                    <div class="abtrngs01">
+                        <div class="card-body">
+                            <h2 class="card-title">Fresh</h2>
+                            <h5 class="card-title">Arrivals</h5>
+                            <p class="card-text">{{arrival.category}}</p>
+                        </div>
+                    </div>
+                </div>
+              </ng-template>
+    
+          </owl-carousel-o>
+    
+        </div>
+      </div>
+</div>

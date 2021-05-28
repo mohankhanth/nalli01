@@ -1,0 +1,25 @@
+
+<div class="wrapbanners01">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-4">
+                <div class="bannertxts01">
+                    <h2>Now a wide range of <span> kurtis </span> to choose from!</h2>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <owl-carousel-o [options]="customOptions" class="arrivas01">
+    
+                    <ng-template carouselSlide *ngFor="let banner of banners01">
+                      <div class="card wraptrdgs01">
+                          <a href="{{banner.link}}">
+                            <img src="{{banner.image}}" class="card-img-top" alt="nalli">
+                          </a>
+                      </div>
+                    </ng-template>
+          
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>
