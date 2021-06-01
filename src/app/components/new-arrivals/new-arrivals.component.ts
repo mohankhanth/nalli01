@@ -10,11 +10,10 @@ import { Arrivals } from '../../model/arrivals';
   styleUrls: ['./new-arrivals.component.css']
 })
 export class NewArrivalsComponent implements OnInit {
-
-  newArrival:Arrivals[];
+  newArrival: Arrivals[];
   customOptions: OwlOptions;
 
-  constructor( private productService: ProductsService) { }
+  constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {
     this.newArrival = this.productService.getNewArrivals();
@@ -30,8 +29,10 @@ export class NewArrivalsComponent implements OnInit {
       pullDrag: true,
       dots: false,
       navSpeed: 700,
-      navText: ['<img src="../assets/img/left-arrows01.jpg" class="card-img-top" alt="...">', 
-                '<img src="../assets/img/right-arrows01.jpg" class="card-img-top" alt="...">'],
+      navText: [
+        '<img src="https://stackblitz.com/files/nalli01/github/mohankhanth/nalli01/master/src/assets/img/left-arrows01.jpg" class="card-img-top" alt="...">',
+        '<img src="https://stackblitz.com/files/nalli01/github/mohankhanth/nalli01/master/src/assets/img/right-arrows01.jpg" class="card-img-top" alt="...">'
+      ],
       responsive: {
         0: {
           items: 1
@@ -47,7 +48,6 @@ export class NewArrivalsComponent implements OnInit {
         }
       },
       nav: true
-    }
+    };
   }
-
 }

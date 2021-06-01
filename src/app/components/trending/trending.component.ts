@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ProductsService } from '../../services/products.service';
 
-import { Trending } from '../../model/trending'
+import { Trending } from '../../model/trending';
 
 @Component({
   selector: 'app-trending',
@@ -10,11 +10,11 @@ import { Trending } from '../../model/trending'
   styleUrls: ['./trending.component.css']
 })
 export class TrendingComponent implements OnInit {
-  trend:string = "Trending Now";
-  trending:Trending[];
+  trend: string = 'Trending Now';
+  trending: Trending[];
   customOptions: OwlOptions;
 
-  constructor( private productService: ProductsService) { }
+  constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {
     this.trending = this.productService.getTrendingProducts();
@@ -24,7 +24,7 @@ export class TrendingComponent implements OnInit {
   arrivalSlider() {
     this.customOptions = {
       center: true,
-      items:3,
+      items: 3,
       loop: true,
       margin: 20,
       mouseDrag: true,
@@ -32,8 +32,10 @@ export class TrendingComponent implements OnInit {
       pullDrag: true,
       dots: false,
       navSpeed: 700,
-      navText: ['<img src="../assets/img/left-arrows01.jpg" class="card-img-top" alt="...">', 
-                '<img src="../assets/img/right-arrows01.jpg" class="card-img-top" alt="...">'],
+      navText: [
+        '<img src="https://stackblitz.com/files/nalli01/github/mohankhanth/nalli01/master/src/assets/img/left-arrows01.jpg" class="card-img-top" alt="...">',
+        '<img src="https://stackblitz.com/files/nalli01/github/mohankhanth/nalli01/master/src/assets/img/right-arrows01.jpg" class="card-img-top" alt="...">'
+      ],
       responsive: {
         0: {
           items: 1
@@ -49,7 +51,6 @@ export class TrendingComponent implements OnInit {
         }
       },
       nav: true
-    }
+    };
   }
-
 }

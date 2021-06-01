@@ -10,11 +10,11 @@ import { Arrivals } from '../../model/arrivals';
   styleUrls: ['./recently-viewd.component.css']
 })
 export class RecentlyViewdComponent implements OnInit {
-  recently:string = "Recently Viewed";
-  newArrival:Arrivals[];
+  recently: string = 'Recently Viewed';
+  newArrival: Arrivals[];
   customOptions: OwlOptions;
 
-  constructor( private productService: ProductsService) { }
+  constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {
     this.newArrival = this.productService.getRecentlyViewed();
@@ -30,8 +30,10 @@ export class RecentlyViewdComponent implements OnInit {
       pullDrag: true,
       dots: false,
       navSpeed: 700,
-      navText: ['<img src="../assets/img/left-arrows01.jpg" class="card-img-top" alt="...">', 
-                '<img src="../assets/img/right-arrows01.jpg" class="card-img-top" alt="...">'],
+      navText: [
+        '<img src="https://stackblitz.com/files/nalli01/github/mohankhanth/nalli01/master/src/assets/img/left-arrows01.jpg" class="card-img-top" alt="...">',
+        '<img src="https://stackblitz.com/files/nalli01/github/mohankhanth/nalli01/master/src/assets/img/right-arrows01.jpg" class="card-img-top" alt="...">'
+      ],
       responsive: {
         0: {
           items: 1
@@ -47,7 +49,6 @@ export class RecentlyViewdComponent implements OnInit {
         }
       },
       nav: true
-    }
+    };
   }
-
 }

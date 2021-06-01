@@ -30,8 +30,10 @@ export class SimilarProductsComponent implements OnInit {
       pullDrag: true,
       dots: false,
       navSpeed: 700,
-      navText: ['<img src="../assets/img/left-arrows01.jpg" class="card-img-top" alt="...">', 
-                '<img src="../assets/img/right-arrows01.jpg" class="card-img-top" alt="...">'],
+      navText: [        
+        '<img src="https://stackblitz.com/files/nalli01/github/mohankhanth/nalli01/master/src/assets/img/left-arrows01.jpg" class="card-img-top" alt="...">',
+        '<img src="https://stackblitz.com/files/nalli01/github/mohankhanth/nalli01/master/src/assets/img/right-arrows01.jpg" class="card-img-top" alt="...">'
+        ],
       responsive: {
         0: {
           items: 1
